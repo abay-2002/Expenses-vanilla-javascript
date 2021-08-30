@@ -2,11 +2,14 @@
 
 * {
     font-family: 'Roboto', sans-serif;
-    color: white !important;
     font-weight:600;
     margin: 0;
     padding: 0;
     transition: .3s;
+}
+
+body, a{
+    color: white;
 }
 
 .dark-mode {
@@ -26,13 +29,13 @@
     border: rgba(0,0,0,.5) solid .5px;
     position: relative;
     transition: .3s;
+    padding: 3px;
 }
 
 .toggle-mode-day div {
     width: 24px;
     height: 24px;
-    position: absolute;
-    top: 3.15px;
+    position: relative;
     left: 0;
     background-image: url(img/sun.png);
     transition: .3s;
@@ -54,12 +57,12 @@
 .toggle-mode-night div {
     width: 24px;
     height: 24px;
-    position: absolute;
-    top: 3.15px;
-    left: 50%;
+    position: relative;
+    left: 45%;
     background-image: url(img/moon.png);
     transition: .3s;
 }
+
 
 /* CONTAINER */
 .container-main {
