@@ -12,14 +12,19 @@
     <link rel="stylesheet" href="style.css">
     <title>ExpenseVanillaJavascript</title>
   </head>
-  <body class="bg-dark">
-    
-    <div class="container expense-title">
+  <body>
+
+    <div class="container-second">
+      <button class="toggle-mode-day" id="ganti">
+        <div></div>
+      </button>
+    </div>
+    <div class="container-main expense-title">
       <h1 class="fw-bold">Expense Tracker</h1>
       <h6 class="fw-bold">By: <a href="akbarangkasa.com" target="blank">Abay</a></h6>
     </div>
     
-    <form class="container" id="wrapper">
+    <form class="container-main" id="wrapper">
 
       <div class="content">
         <label class="fw-bold">Title</label>
@@ -42,7 +47,7 @@
 
     </form>
 
-    <ol class="container expense-parent">
+    <ol class="container-main expense-parent">
       <h2 class="fw-bold">My Expense:</h2>
       
       <li class="expense">
@@ -74,7 +79,7 @@
       </li>
       
     </ol>
-    <div class="container total">Total: </div>
+    <div class="container-main total">Total: </div>
 
   </body>
     <!-- Option 2: Separate Popper and Bootstrap JS -->

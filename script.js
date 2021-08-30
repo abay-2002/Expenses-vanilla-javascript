@@ -31,5 +31,19 @@ buttonSubmit.addEventListener("click",function(event){
 });
 // ==== EXPENSE INPUT CLOSE ====
 
+// DAY/NIGHT-MODE
+let darkMode = document.getElementById('ganti');
+let body = document.getElementsByTagName('body')[0];
+
+darkMode.addEventListener('click',function(){
+    darkMode.classList.toggle('toggle-mode-night');
+    body.classList.toggle('dark-mode');
+});
+
+
+
+
+
+
 
 
