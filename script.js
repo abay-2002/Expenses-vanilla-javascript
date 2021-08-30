@@ -1,3 +1,12 @@
+// DAY/NIGHT-MODE
+let darkMode = document.getElementById('ganti');
+let body = document.getElementsByTagName('body')[0];
+
+darkMode.addEventListener('click',function(){
+    darkMode.classList.toggle('toggle-mode-night');
+    body.classList.toggle('dark-mode');
+});
+
 // ==== EXPENSE INPUT ====
 // title
 let titleInput = document.getElementById("title-input");
@@ -28,17 +37,13 @@ buttonSubmit.addEventListener("click",function(event){
     }
     
     console.log(expenseInput);
+
 });
 // ==== EXPENSE INPUT CLOSE ====
 
-// DAY/NIGHT-MODE
-let darkMode = document.getElementById('ganti');
-let body = document.getElementsByTagName('body')[0];
+// ==== MY EXPENSE ====
 
-darkMode.addEventListener('click',function(){
-    darkMode.classList.toggle('toggle-mode-night');
-    body.classList.toggle('dark-mode');
-});
+
 
 
 
