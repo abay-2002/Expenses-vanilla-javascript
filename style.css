@@ -119,7 +119,10 @@ body, a{
     border-radius: 6px;
     margin-top: 22px;
     overflow: hidden;
+    padding-top: 0;
+    padding: 8px;
 }
+
 
 .expense-entity {
     display: flex;
@@ -127,11 +130,35 @@ body, a{
     justify-content: center;
     text-align: center;
     background-color: rgb(170, 42, 196);
-    margin: 8px ;
+    margin: 8px;
     border-radius: 6px;
 }
 
+/* pop-up-confirm */
+.pop-up-confirm-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0,0,.5);
+}
 
+.pop-up-confirm {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 40%;
+    width: 50%;
+    padding:20px;
+    border-radius: 8px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 4px;
+}
 
 
 

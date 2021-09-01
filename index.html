@@ -13,14 +13,15 @@
     <title>ExpenseVanillaJavascript</title>
   </head>
   <body>
-
     <div class="container-second">
       <button class="toggle-mode-day" id="ganti">
         <div></div>
-      </button>
+      </button>  
     </div>
+
     <div class="container-main expense-title">
       <h1 class="fw-bold">Expense Tracker</h1>
+      <h6 class="bg-warning fw-bold text-dark">Demo version</h6>
       <h6 class="fw-bold">By: <a href="akbarangkasa.com" target="blank">Abay</a></h6>
     </div>
     
@@ -51,8 +52,8 @@
     <ol class="container-main expense-parent" id="expense-wrapper">
       <h2 class="fw-bold">My Expense:</h2>
       
-      <!-- 
-        <li class="expense">
+    <!--       
+      <li class="expense">
         <div class="date expense-entity">
           28/8/2021
         </div>
@@ -64,12 +65,22 @@
         <div class="amount expense-entity">
           Rp.12000
         </div>
-      </li> 
+        <button type="button" class="btn btn-danger">Delete</button>
+      </li>  
     -->
-      
+
     </ol>
 
-    <div class="container-main total">Total: </div>
+    <!-- warning pop-up confirm -->
+    <!-- <div class="pop-up-confirm-wrapper">
+      <div class="pop-up-confirm bg-warning">
+        <p class="text-dark">Yakin hapus?</p>
+        <button class="btn btn-danger">Ok</button>
+        <button class="btn btn-danger">Cancel</button>
+      </div>
+    </div> -->
+
+    <div class="container-main total" id="total"> </div>
 
   </body>
     <!-- Option 2: Separate Popper and Bootstrap JS -->
