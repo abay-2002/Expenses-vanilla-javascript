@@ -25,13 +25,13 @@ titleInput.addEventListener('change',function(event){
 // amount
 let amountInput = document.getElementById("amount-input");
 amountInput.addEventListener('change',function(event){
-    valueAmount = event.target.value;
+    valueAmount = parseInt(event.target.value);
 });
 
 // date
 let dateInput = document.getElementById("date-input");
 dateInput.addEventListener('change',function(event){
-    valueDate = event.target.value;
+    valueDate = parseInt(event.target.value);
 });
 // ==== EXPENSE INPUT CLOSE ====
 
@@ -74,10 +74,20 @@ confirmPopUp.appendChild(confirmCancel);
 confirmWrapper.appendChild(confirmPopUp);
 // ===== POPUP-CONFIRM CLOSE =====
 
+
+
+
+
 // ==== MY EXPENSE ====
 let ol = document.getElementById('expense-wrapper');
 
 
+
+
+
+// ==== TOTAL ====
+let nilaiAwal = 0;
+let total = document.getElementById('total');
 
 
 
@@ -88,13 +98,13 @@ let buttonSubmit = document.getElementById("expense-submit");
 buttonSubmit.addEventListener("click", function(event){
     event.preventDefault();
 
-    let expenseInput = {
+    expenseInput = {
         date: new Date(valueDate),
         title: valueTitle,
         amount: valueAmount 
     }
 
-    // ==== MY EXPENSE ====
+    // ==== MY EXPENSE ELEMENT ====
     // li
     let li = document.createElement('li');
     li.setAttribute('class', 'expense');
@@ -113,7 +123,7 @@ buttonSubmit.addEventListener("click", function(event){
     // amount
     let divAmountEntity = document.createElement('div');
     divAmountEntity.setAttribute('class','amount expense-entity');    
-    parseInt(divAmountEntity.innerHTML = expenseInput.amount);
+    divAmountEntity.innerHTML = "Rp." + expenseInput.amount;
 
     // delete button
     let delButton = document.createElement('button');
@@ -140,22 +150,17 @@ buttonSubmit.addEventListener("click", function(event){
     li.appendChild(divAmountEntity);
     li.appendChild(delButton);
 
-    console.log(expenseInput); 
+    console.log(expenseInput);
+
+    // ==== TOTAL ====
+    let operasiTotal = nilaiAwal += valueAmount;
+    total.innerHTML = "Expense total: Rp." + operasiTotal;
 
 });
-
-
 // ===== BUTTON SUBMIT CLOSE =====
 
 
-// <!-- warning pop-up confirm -->
-// <div class="pop-up-confirm-wrapper">
-//   <div class="pop-up-confirm bg-warning">
-//     <p class="text-dark">Yakin hapus?</p>
-//     <button class="btn btn-danger">Ok</button>
-//     <button class="btn btn-danger">Cancel</button>
-//   </div>
-// </div>
+
 
 
 
