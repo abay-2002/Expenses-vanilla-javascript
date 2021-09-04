@@ -1,0 +1,15 @@
+ console.log(typeof(valueDate)); // string
+ console.log(typeof(expenseInput.amount)); //string
+
+
+DayAndNight Mode
+Expense Input
+ ^ditampung didalam object: expenseInput
+Pop-up confirm
+Button Submit
+ Expense element = Expense Input
+
+1.ambil number dari object expense input
+
+
+

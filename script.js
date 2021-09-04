@@ -13,36 +13,6 @@ darkMode.addEventListener('click',function(){
 
 
 
-
-
-// ==== EXPENSE INPUT ====
-// title
-let titleInput = document.getElementById("title-input");
-titleInput.addEventListener('change',function(event){
-    valueTitle = event.target.value;
-});
-
-// amount
-let amountInput = document.getElementById("amount-input");
-amountInput.addEventListener('change',function(event){
-    valueAmount = parseInt(event.target.value);
-});
-
-// date
-let dateInput = document.getElementById("date-input");
-dateInput.addEventListener('change',function(event){
-    valueDate = parseInt(event.target.value);
-});
-// ==== EXPENSE INPUT CLOSE ====
-
-
-
-
-
-
-
-
-
 // ===== POPUP-CONFIRM =====
 // pop-up-confirm-wrapper
 let confirmWrapper = document.createElement('div');
@@ -74,6 +44,31 @@ confirmPopUp.appendChild(confirmCancel);
 confirmWrapper.appendChild(confirmPopUp);
 // ===== POPUP-CONFIRM CLOSE =====
 
+
+
+
+
+
+
+// ==== EXPENSE INPUT ====
+// title
+let titleInput = document.getElementById("title-input");
+titleInput.addEventListener('change',function(event){
+    valueTitle = event.target.value;
+});
+
+// amount
+let amountInput = document.getElementById("amount-input");
+amountInput.addEventListener('change',function(event){
+    valueAmount = parseInt(event.target.value);
+});
+
+// date
+let dateInput = document.getElementById("date-input");
+dateInput.addEventListener('change',function(event){
+    valueDate = parseInt(event.target.value);
+});
+// ==== EXPENSE INPUT CLOSE ====
 
 
 
@@ -130,18 +125,6 @@ buttonSubmit.addEventListener("click", function(event){
     delButton.setAttribute('class', 'btn btn-danger');
     delButton.innerHTML = "Delete";
 
-    // delete button function
-    delButton.addEventListener('click', function(){        
-        body.appendChild(confirmWrapper);
-        confirmOk.addEventListener('click', function(){
-            ol.removeChild(li);
-            body.removeChild(confirmWrapper);
-        });
-        confirmCancel.addEventListener('click', function(){
-            body.removeChild(confirmWrapper);
-        });
-    });
-
     // my expenses element
     ol.appendChild(li);
 
@@ -151,21 +134,26 @@ buttonSubmit.addEventListener("click", function(event){
     li.appendChild(delButton);
 
     console.log(expenseInput);
-
+    
     // ==== TOTAL ====
     let operasiTotal = nilaiAwal += valueAmount;
     total.innerHTML = "Expense total: Rp." + operasiTotal;
 
+    // delete button function
+    delButton.addEventListener('click', function(){        
+        body.appendChild(confirmWrapper);
+        confirmOk.addEventListener('click', function(){
+            ol.removeChild(li);
+            body.removeChild(confirmWrapper);
+
+            // ==== TOTAL ====
+            let operasiTotal = nilaiAwal -= valueAmount;
+            total.innerHTML = "Expense total: Rp." + operasiTotal;
+        });
+        confirmCancel.addEventListener('click', function(){
+            body.removeChild(confirmWrapper);
+        });
+    });
+
 });
 // ===== BUTTON SUBMIT CLOSE =====
-
-
-
-
-
-
-
-
-
-
-
