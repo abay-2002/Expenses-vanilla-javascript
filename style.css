@@ -160,6 +160,11 @@ body, a{
     grid-gap: 4px;
 }
 
+/* TOTAL */
+#total {
+    margin-bottom: 100px;
+}
+
 
 
 
