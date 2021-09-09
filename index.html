@@ -25,25 +25,25 @@
       <h6 class="fw-bold">By: <a href="http://akbarangkasa.com/" target="blank">Abay</a></h6>
     </div>
     
-    <form action="POST" data-netlify="true" class="container-main" id="wrapper" name="contact"> 
+    <form class="container-main" id="wrapper"> 
 
       <div class="content">
         <label class="fw-bold">Title</label>
-        <input type="text" name="title-input" id="title-input" class="form-control" required/>
+        <input type="text" id="title-input" class="form-control" required/>
       </div>
       
       <div class="content">
         <label class="fw-bold">Amount</label>
-        <input type="number" name="amount-input" id="amount-input" class="form-control" required/>
+        <input type="number" id="amount-input" class="form-control" required/>
       </div>
       
       <div class="content">
         <label class="fw-bold">Date</label>
-        <input type="date" name="date-input" id="date-input" class="form-control" required/>
+        <input type="date" id="date-input" class="form-control" required/>
       </div>
 
       <div class="content button-parent">
-        <button type="submit" value="Send Message" class="btn btn-primary fw-bold" id="expense-submit">Add Expense</button>
+        <button type="submit" class="btn btn-primary fw-bold" id="expense-submit">Add Expense</button>
       </div>
 
     </form>
@@ -87,4 +87,28 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
     <script src="script.js"></script>
+
+    <script>
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "firebase/app";
+      import { getAnalytics } from "firebase/analytics";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyD7jebz-O9mVjNRGgjfP6Q1H6PdvnlFHzI",
+        authDomain: "expensetrackerbyabay.firebaseapp.com",
+        projectId: "expensetrackerbyabay",
+        storageBucket: "expensetrackerbyabay.appspot.com",
+        messagingSenderId: "669547780078",
+        appId: "1:669547780078:web:c5b289ccb06b7a79c8e0ff",
+        measurementId: "G-0PLGCVX4J7"
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
 </html>

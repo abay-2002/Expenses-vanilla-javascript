@@ -92,7 +92,7 @@ let total = document.getElementById('total');
 let buttonSubmit = document.getElementById("expense-submit");
 buttonSubmit.addEventListener("click", function(event){
     event.preventDefault();
-
+    
     expenseInput = {
         date: new Date(valueDate),
         title: valueTitle,
